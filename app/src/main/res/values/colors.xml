@@ -8,12 +8,15 @@
     <color name="lightblue_700">#2276c6</color>
 
     <!-- Error colors -->
-    <color name="red_600">#b00020</color>
     <color name="red_200">#cf6679</color>
+    <color name="red_600">#b00020</color>
 
-    <!-- Surface colors -->
-    <color name="white_50">#ffffff</color>
-    <color name="white_100">#fafafa</color>
+    <!-- Surface and "on" colors -->
+    <color name="white_50">#fafafa</color>
     <color name="black_800">#242424</color>
     <color name="black_900">#121212</color>
+
+    <!-- White and black -->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>
