@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Base brand colors -->
+    <color name="lightblue_300">#56c4ff</color>
+    <color name="lightblue_400">#46abfa</color>
+    <color name="lightblue_500">#009afa</color>
+    <color name="lightblue_600">#008def</color>
+    <color name="lightblue_700">#2276c6</color>
+
+    <!-- Error colors -->
+    <color name="red_600">#b00020</color>
+    <color name="red_200">#cf6679</color>
+
+    <!-- Surface colors -->
+    <color name="white_50">#ffffff</color>
+    <color name="white_100">#fafafa</color>
+    <color name="black_800">#242424</color>
+    <color name="black_900">#121212</color>
 </resources>
