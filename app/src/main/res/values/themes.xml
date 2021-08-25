@@ -1,16 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Theme Overlays -->
-    <style name="ThemeOverlays.ActionBarColorSurface" parent="ThemeOverlay.MaterialComponents.ActionBar">
-        <item name="colorPrimary">?colorSurface</item>
-        <item name="colorOnPrimary">?colorOnSurface</item>
-    </style>
-
-    <!-- Widgets -->
-    <style name="Widgets.BottomNavigationColorSurface" parent="">
-        <item name="android:background">?colorSurface</item>
-    </style>
-
     <!-- Base theme -->
     <style name="Base.Theme.AniApp" parent="Theme.MaterialComponents.DayNight">
 
@@ -32,45 +21,19 @@
         <item name="colorOnSurface">@color/black_900</item>
         <item name="colorOnError">@color/white_50</item>
 
-        <!-- Typography attributes -->
-        <item name="textAppearanceHeadline1">@style/TextAppearance.AniApp.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.AniApp.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.AniApp.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.AniApp.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.AniApp.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.AniApp.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.AniApp.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.AniApp.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.AniApp.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.AniApp.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.AniApp.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.AniApp.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.AniApp.Overline</item>
+        <!-- Use surface color for action bar and bottom nav -->
+        <item name="actionBarTheme">@style/ThemeOverlay.AniApp.ActionBar.ColorSurface</item>
+        <item name="bottomNavigationStyle">@style/Widget.AniApp.BottomNavigationView.ColorSurface</item>
 
-        <!-- Shape attributes -->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AniApp.SmallComponent
-        </item>
-        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AniApp.MediumComponent
-        </item>
-        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AniApp.LargeComponent
-        </item>
+        <!-- Use surface color for status bar and background color for nav bar -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
 
         <!-- Toggle light system bars -->
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
         <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
     </style>
 
-    <!-- Base theme, but with bar colors changed to surface/background -->
-    <style name="Base.Theme.AniApp.SurfaceColorBars" parent="Base.Theme.AniApp">
-        <!-- Use surface color for action bar -->
-        <item name="actionBarTheme">@style/ThemeOverlays.ActionBarColorSurface</item>
-        <item name="bottomNavigationStyle">@style/Widgets.BottomNavigationColorSurface</item>
-
-        <!-- Use surface color for status bar and background color for nav bar -->
-        <item name="android:statusBarColor">?attr/colorSurface</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
-    </style>
-
     <!-- Main app theme (light) -->
-    <style name="Theme.AniApp" parent="Base.Theme.AniApp.SurfaceColorBars" />
+    <style name="Theme.AniApp" parent="Base.Theme.AniApp" />
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme Overlays -->
+    <style name="ThemeOverlay.AniApp.ActionBar.ColorSurface" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorPrimary">?colorSurface</item>
+        <item name="colorOnPrimary">?colorOnSurface</item>
+    </style>
+
+    <!-- Widgets -->
+    <style name="Widget.AniApp.BottomNavigationView.ColorSurface" parent="">
+        <item name="android:background">?colorSurface</item>
+    </style>
+
+    <!-- Typography -->
+
+    <!-- Shape Appearances -->
+
+</resources>

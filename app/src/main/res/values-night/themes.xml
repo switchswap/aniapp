@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Main app theme (dark) -->
-    <style name="Theme.AniApp" parent="Base.Theme.AniApp.SurfaceColorBars">
+    <style name="Theme.AniApp" parent="Base.Theme.AniApp">
 
         <!-- Brand colors -->
         <item name="colorPrimary">@color/lightblue_400</item>
@@ -22,7 +22,7 @@
         <item name="colorOnError">@color/black_900</item>
 
         <!-- Toggle dark system bars -->
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
         <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
     </style>
 </resources>
