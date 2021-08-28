@@ -1,8 +1,6 @@
-package moe.swap.aniapp.database
+package moe.swap.aniapp.data
 
 import androidx.room.TypeConverter
-import moe.swap.aniapp.database.entities.AnimeProvider
-import moe.swap.aniapp.database.entities.AnimeReleaseStatus
 import java.util.Date
 
 class Converters {

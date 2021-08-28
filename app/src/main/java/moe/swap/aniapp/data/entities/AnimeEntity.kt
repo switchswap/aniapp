@@ -1,13 +1,16 @@
-package moe.swap.aniapp.database.entities
+package moe.swap.aniapp.data.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.Date
 
-@Entity(tableName = "anime")
-data class Anime(
-    @PrimaryKey val id: Int,
+@Entity(
+    tableName = "anime",
+    primaryKeys = ["id"],
+)
+data class AnimeEntity(
+    @ColumnInfo(name= "id") val id: Int,
 
     @ColumnInfo(name = "provider") val provider: AnimeProvider,
     @ColumnInfo(name = "provider_anime_id") val providerAnimeId: Int,

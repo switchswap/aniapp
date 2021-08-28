@@ -7,6 +7,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.room.Room
+import moe.swap.aniapp.data.AppDatabase
 import moe.swap.aniapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,5 +31,12 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_downloads, R.id.navigation_settings))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        // just for testing
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "aniApp"
+        ).build()
+
     }
 }
