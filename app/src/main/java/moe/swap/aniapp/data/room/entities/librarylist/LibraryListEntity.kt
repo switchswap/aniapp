@@ -1,9 +1,8 @@
-package moe.swap.aniapp.data.entities
+package moe.swap.aniapp.data.room.entities.librarylist
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
-import androidx.room.PrimaryKey
 
 @Entity(
     tableName = "lists",

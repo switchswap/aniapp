@@ -1,6 +1,7 @@
-package moe.swap.aniapp.data.entities
+package moe.swap.aniapp.data.room.entities.episode
 
 import androidx.room.*
+import moe.swap.aniapp.data.room.entities.sourceAnime.SourceAnimeEntity
 
 @Entity(
     tableName = "episodes",

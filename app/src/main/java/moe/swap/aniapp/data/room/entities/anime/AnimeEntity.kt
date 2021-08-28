@@ -1,8 +1,7 @@
-package moe.swap.aniapp.data.entities
+package moe.swap.aniapp.data.room.entities.anime
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity(

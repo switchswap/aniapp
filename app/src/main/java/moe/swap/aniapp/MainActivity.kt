@@ -8,7 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
-import moe.swap.aniapp.data.AppDatabase
+import moe.swap.aniapp.data.room.AppDatabase
 import moe.swap.aniapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

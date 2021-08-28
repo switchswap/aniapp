@@ -1,8 +1,8 @@
-package moe.swap.aniapp.data.entities.relations
+package moe.swap.aniapp.data.room.entities
 
 import androidx.room.*
-import moe.swap.aniapp.data.entities.AnimeEntity
-import moe.swap.aniapp.data.entities.LibraryListEntity
+import moe.swap.aniapp.data.room.entities.anime.AnimeEntity
+import moe.swap.aniapp.data.room.entities.librarylist.LibraryListEntity
 
 @Entity(
     tableName = "anime_list_junction",

@@ -1,8 +1,7 @@
-package moe.swap.aniapp.data.daos
+package moe.swap.aniapp.data.room.entities.sourceAnime
 
 import androidx.room.*
-import moe.swap.aniapp.data.entities.SourceAnimeEntity
-import moe.swap.aniapp.data.util.BaseDao
+import moe.swap.aniapp.data.room.util.BaseDao
 
 // Insert a new entry for anime data retrieved from a source
 // Happens as soon as we ask the source for anime data the first time, and it'll return

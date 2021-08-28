@@ -1,9 +1,8 @@
-package moe.swap.aniapp.data.daos
+package moe.swap.aniapp.data.room.entities.librarylist
 
 import androidx.room.*
-import moe.swap.aniapp.data.entities.LibraryListEntity
-import moe.swap.aniapp.data.entities.relations.ListWithAnime
-import moe.swap.aniapp.data.util.BaseDao
+import moe.swap.aniapp.data.room.entities.ListWithAnime
+import moe.swap.aniapp.data.room.util.BaseDao
 
 @Dao
 interface LibraryListDao : BaseDao<LibraryListEntity> {

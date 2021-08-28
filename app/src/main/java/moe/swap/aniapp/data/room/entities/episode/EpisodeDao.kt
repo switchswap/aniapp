@@ -1,8 +1,7 @@
-package moe.swap.aniapp.data.daos
+package moe.swap.aniapp.data.room.entities.episode
 
 import androidx.room.*
-import moe.swap.aniapp.data.entities.EpisodeEntity
-import moe.swap.aniapp.data.util.BaseDao
+import moe.swap.aniapp.data.room.util.BaseDao
 
 // upsert episode(s) whenever there's a new batch of episodes coming in for a source
 

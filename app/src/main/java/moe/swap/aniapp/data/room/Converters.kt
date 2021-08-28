@@ -1,4 +1,4 @@
-package moe.swap.aniapp.data
+package moe.swap.aniapp.data.room
 
 import androidx.room.TypeConverter
 import java.util.Date

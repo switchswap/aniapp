@@ -1,8 +1,7 @@
-package moe.swap.aniapp.data.daos
+package moe.swap.aniapp.data.room.entities.anime
 
 import androidx.room.*
-import moe.swap.aniapp.data.entities.AnimeEntity
-import moe.swap.aniapp.data.util.BaseDao
+import moe.swap.aniapp.data.room.util.BaseDao
 
 // insert anime as soon as possible, likely when clicking on a search result.
 // all other actions (querying sources, episodes, adding anime to lists) depend on the anime being inserted

@@ -1,4 +1,4 @@
-package moe.swap.aniapp.data.util
+package moe.swap.aniapp.data.room.util
 
 import androidx.room.*
 
