@@ -1,4 +1,4 @@
-package moe.swap.aniapp.model
+package moe.swap.aniapp.models
 
 /**
  * This class defines a single entry of an anime

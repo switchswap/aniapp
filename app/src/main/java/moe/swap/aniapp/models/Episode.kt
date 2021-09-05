@@ -1,4 +1,4 @@
-package moe.swap.aniapp.model
+package moe.swap.aniapp.models
 
 /**
  * Defines a single episode of a specific anime,

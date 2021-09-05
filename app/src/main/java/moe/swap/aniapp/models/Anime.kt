@@ -1,4 +1,4 @@
-package moe.swap.aniapp.model
+package moe.swap.aniapp.models
 
 /**
  * Describes a single anime entry obtained from
