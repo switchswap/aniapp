@@ -4,12 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import moe.swap.aniapp.R
+import androidx.recyclerview.widget.LinearLayoutManager
 import moe.swap.aniapp.databinding.FragmentHomeBinding
+import moe.swap.aniapp.models.AnimeCardGroup
+import moe.swap.aniapp.ui.adapters.AnimeCardGroupAdapter
+import moe.swap.aniapp.util.DataGen.genAnime
 
 class HomeFragment : Fragment() {
 
@@ -21,21 +22,28 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
-
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val animeCards = genAnime(5)
+
+        val continueWatchingGroup = AnimeCardGroup("Continue Watching", animeCards, false, false)
+        val seasonPopularGroup = AnimeCardGroup("Popular This Season", animeCards, false, false)
+
+        // Setup recycler view
+        binding.homeCardGroups.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = AnimeCardGroupAdapter(listOf(continueWatchingGroup, seasonPopularGroup))
+        }
     }
 
     override fun onDestroyView() {

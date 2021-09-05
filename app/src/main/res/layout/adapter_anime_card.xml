@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="140dp"
-    android:layout_height="257dp">
+    android:layout_height="257dp"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clipToPadding="true"
-        app:cardCornerRadius="10.5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="10.5dp">
 
         <ImageView
-            android:id="@+id/itemCover"
+            android:id="@+id/item_cover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -29,25 +30,21 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/itemTitle"
+        android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:text="Zombie Land Saga: Revenge "
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/itemEpisodeNumber"
+        android:id="@+id/item_episode_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="Ep 2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/itemTitle" />
+        android:text="Ep 2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
