@@ -1,4 +1,4 @@
-package moe.swap.aniapp.ui.downloads
+package moe.swap.aniapp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import moe.swap.aniapp.R
-import moe.swap.aniapp.databinding.FragmentHomeBinding
+import moe.swap.aniapp.databinding.FragmentSettingsBinding
+import moe.swap.aniapp.ui.viewmodels.SettingsViewModel
 
-class DownloadsFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
-    private lateinit var downloadsViewModel: DownloadsViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private lateinit var settingsViewModel: SettingsViewModel
+    private var _binding: FragmentSettingsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,11 +25,16 @@ class DownloadsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        downloadsViewModel =
-            ViewModelProvider(this).get(DownloadsViewModel::class.java)
+        settingsViewModel =
+            ViewModelProvider(this).get(SettingsViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val textView: TextView = binding.textDashboard
+        settingsViewModel.text.observe(viewLifecycleOwner, Observer {
+            textView.text = it
+        })
         return root
     }
 

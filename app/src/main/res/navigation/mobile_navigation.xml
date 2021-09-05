@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="moe.swap.aniapp.ui.home.HomeFragment"
+        android:name="moe.swap.aniapp.ui.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -26,25 +26,25 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="moe.swap.aniapp.ui.search.SearchFragment"
+        android:name="moe.swap.aniapp.ui.fragments.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/navigation_library"
-        android:name="moe.swap.aniapp.ui.library.LibraryFragment"
+        android:name="moe.swap.aniapp.ui.fragments.LibraryFragment"
         android:label="@string/title_library"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_downloads"
-        android:name="moe.swap.aniapp.ui.downloads.DownloadsFragment"
+        android:name="moe.swap.aniapp.ui.fragments.DownloadsFragment"
         android:label="@string/title_downloads"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="moe.swap.aniapp.ui.settings.SettingsFragment"
+        android:name="moe.swap.aniapp.ui.fragments.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

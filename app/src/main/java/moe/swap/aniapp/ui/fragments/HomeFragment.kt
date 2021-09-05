@@ -1,4 +1,4 @@
-package moe.swap.aniapp.ui.home
+package moe.swap.aniapp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import moe.swap.aniapp.databinding.FragmentHomeBinding
 import moe.swap.aniapp.models.AnimeCardGroup
 import moe.swap.aniapp.ui.adapters.AnimeCardGroupAdapter
+import moe.swap.aniapp.ui.viewmodels.HomeViewModel
 import moe.swap.aniapp.util.DataGen.genAnime
 
 class HomeFragment : Fragment() {

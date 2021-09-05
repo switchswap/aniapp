@@ -1,4 +1,4 @@
-package moe.swap.aniapp.ui.home
+package moe.swap.aniapp.ui.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

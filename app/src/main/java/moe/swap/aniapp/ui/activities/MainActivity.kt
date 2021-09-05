@@ -1,4 +1,4 @@
-package moe.swap.aniapp.ui
+package moe.swap.aniapp.ui.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

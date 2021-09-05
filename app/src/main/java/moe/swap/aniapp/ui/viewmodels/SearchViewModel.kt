@@ -1,13 +1,13 @@
-package moe.swap.aniapp.ui.library
+package moe.swap.aniapp.ui.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class LibraryViewModel : ViewModel() {
+class SearchViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is search Fragment"
     }
     val text: LiveData<String> = _text
 }
