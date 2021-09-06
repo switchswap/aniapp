@@ -6,14 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import moe.swap.aniapp.R
 import moe.swap.aniapp.databinding.AdapterAnimeCardBinding
-import moe.swap.aniapp.extensions.toast
 import moe.swap.aniapp.models.Anime
 
 class AnimeCardAdapter(private val dataSet: List<Anime>):
-    RecyclerView.Adapter<AnimeCardAdapter.ViewHolder>(), View.OnClickListener {
+    RecyclerView.Adapter<AnimeCardAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener {
         private val binding = AdapterAnimeCardBinding.bind(view)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
 
         fun bindData(anime: Anime, hideEpisodeNumber: Boolean) {
             // Todo: Use glide to set the picture from the cover url
@@ -22,6 +25,10 @@ class AnimeCardAdapter(private val dataSet: List<Anime>):
             if (hideEpisodeNumber) {
                 binding.itemEpisodeNumber.visibility = View.GONE
             }
+        }
+
+        override fun onClick(v: View?) {
+            TODO("Not yet implemented")
         }
     }
 
@@ -36,8 +43,4 @@ class AnimeCardAdapter(private val dataSet: List<Anime>):
     }
 
     override fun getItemCount(): Int = dataSet.size
-
-    override fun onClick(v: View?) {
-
-    }
 }
