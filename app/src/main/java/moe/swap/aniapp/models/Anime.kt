@@ -1,5 +1,7 @@
 package moe.swap.aniapp.models
 
+import java.io.Serializable
+
 /**
  * Describes a single anime entry obtained from
  * one of the available providers (i.e. Anilist etc.)
@@ -59,7 +61,7 @@ data class Anime(
     val coverUrl: String,
     val bannerUrl: String,
     val selectedSourceId: Long
-)
+): Serializable
 
 /**
  * Stores different representations of an anime title
@@ -71,7 +73,7 @@ data class AnimeTitle(
     val native: String,
     val english: String,
     val romaji: String
-)
+): Serializable
 
 /**
  * Describes the available 4 seasons an anime can air in
