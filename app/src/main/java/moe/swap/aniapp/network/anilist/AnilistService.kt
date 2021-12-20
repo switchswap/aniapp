@@ -14,4 +14,8 @@ interface AnilistService {
     suspend fun searchAnime(
         @Body builder: QueryContainerBuilder
     ): Response<GraphContainer<AnimeQueryResult>>
+
+    companion object {
+        const val API_URL = "https://graphql.anilist.co/"
+    }
 }
