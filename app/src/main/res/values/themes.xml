@@ -23,7 +23,8 @@
 
         <!-- Use surface color for action bar and bottom nav -->
         <item name="actionBarTheme">@style/ThemeOverlay.AniApp.ActionBar.ColorSurface</item>
-        <item name="bottomNavigationStyle">@style/Widget.AniApp.BottomNavigationView.ColorSurface</item>
+        <item name="bottomNavigationStyle">@style/Widget.AniApp.BottomNavigationView.ColorSurface
+        </item>
 
         <!-- Use surface color for status bar and background color for nav bar -->
         <item name="android:statusBarColor">?attr/colorSurface</item>
@@ -36,4 +37,13 @@
 
     <!-- Main app theme (light) -->
     <style name="Theme.AniApp" parent="Base.Theme.AniApp" />
+
+    <style name="Theme.AniApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AniApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AniApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

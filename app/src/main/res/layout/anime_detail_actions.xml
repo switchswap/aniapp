@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/buttonFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/heart_plus_outline"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTrack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/sync"
+        app:layout_constraintEnd_toStartOf="@+id/imageDownload"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFollow"
+        app:layout_constraintTop_toTopOf="@+id/buttonFollow" />
+
+    <ImageButton
+        android:id="@+id/imageDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/arrow_down_circle_outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonTrack"
+        app:layout_constraintTop_toTopOf="@+id/buttonTrack" />
+
+    <TextView
+        android:id="@+id/labelFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        app:layout_constraintEnd_toEndOf="@+id/buttonFollow"
+        app:layout_constraintStart_toStartOf="@+id/buttonFollow"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFollow" />
+
+    <TextView
+        android:id="@+id/labelTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTrack"
+        app:layout_constraintStart_toStartOf="@+id/buttonTrack"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTrack" />
+
+    <TextView
+        android:id="@+id/labelDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        app:layout_constraintEnd_toEndOf="@+id/imageDownload"
+        app:layout_constraintStart_toStartOf="@+id/imageDownload"
+        app:layout_constraintTop_toBottomOf="@+id/imageDownload" />
+</androidx.constraintlayout.widget.ConstraintLayout>
