@@ -56,7 +56,7 @@ data class Anime(
     val timeUntilNextEpisode: Long?,
     val season: AnimeSeason?,
     val year: Int?,
-    val rating: Float,
+    val rating: Double,
     val tags: List<String>,
     val coverUrl: String,
     val bannerUrl: String,

@@ -31,7 +31,7 @@ object DataGen {
                 null,
                 AnimeSeason.FALL,
                 2018,
-                100f,
+                100.0,
                 emptyList(),
                 "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx100182-KctPmCJ2smHQ.jpg",
                 "https://s4.anilist.co/file/anilistcdn/media/anime/banner/100182-3OWOEFKRzFKI.jpg",
