@@ -1,16 +1,22 @@
 package moe.swap.aniapp.ui.adapters
 
+import android.app.ActionBar
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import moe.swap.aniapp.R
 import moe.swap.aniapp.databinding.AdapterAnimeCardBinding
 import moe.swap.aniapp.models.Anime
 import moe.swap.aniapp.ui.activities.AnimeDetailsActivity
+import android.util.TypedValue
+import kotlin.math.roundToInt
 
-class AnimeCardAdapter(private val dataSet: List<Anime>):
+
+class AnimeCardAdapter(private val dataSet: List<Anime>, private val isHorizontal: Boolean):
     RecyclerView.Adapter<AnimeCardAdapter.ViewHolder>()  {
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -29,8 +35,16 @@ class AnimeCardAdapter(private val dataSet: List<Anime>):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        // 140 x 257
         val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_anime_card, parent, false)
-
+        if (isHorizontal) {
+            val width = TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                140f,
+                view.resources.displayMetrics
+            ).roundToInt()
+            view.layoutParams = LinearLayout.LayoutParams(width, LinearLayout.LayoutParams.MATCH_PARENT)
+        }
         return ViewHolder(view)
     }
 
