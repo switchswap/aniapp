@@ -11,9 +11,9 @@ import java.time.Year
 import java.time.YearMonth
 import java.util.*
 
-class AnilistRepository: KoinComponent {
+class AnilistProvider: KoinComponent {
 
-    suspend fun getTrendingAnime(season: String = getSeason(), year: Int = getYear()): Response<GraphContainer<AnimeQueryResult>> {
+    suspend fun getSeasonPopular(season: String = getSeason(), year: Int = getYear()): Response<GraphContainer<AnimeQueryResult>> {
         val service: AnilistService = get()
         val queryBuilder = QueryContainerBuilder()
             .putVariables(

@@ -7,7 +7,7 @@ import io.github.wax911.library.annotation.processor.plugin.AssetManagerDiscover
 import io.github.wax911.library.converter.GraphConverter
 import io.github.wax911.library.logger.DefaultGraphLogger
 import io.github.wax911.library.logger.contract.ILogger
-import moe.swap.aniapp.network.anilist.AnilistRepository
+import moe.swap.aniapp.network.anilist.AnilistProvider
 import moe.swap.aniapp.network.anilist.AnilistService
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidContext
@@ -43,5 +43,5 @@ val appModule = module {
             .create(AnilistService::class.java)
     }
 
-    single { AnilistRepository }
+    single { AnilistProvider }
 }
