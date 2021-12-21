@@ -1,13 +1,14 @@
 package moe.swap.aniapp.ui.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.view.*
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import moe.swap.aniapp.R
 import moe.swap.aniapp.databinding.FragmentNotificationsBinding
 import moe.swap.aniapp.ui.viewmodels.LibraryViewModel
 
@@ -35,6 +36,7 @@ class LibraryFragment : Fragment() {
         libraryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        setHasOptionsMenu(true)
         return root
     }
 
@@ -42,4 +44,26 @@ class LibraryFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_search, menu)
+        val menuItem = menu.findItem(R.id.action_search)
+
+        val searchView: SearchView = menuItem.actionView as SearchView
+        searchView.queryHint = "Search for anime!"
+
+        searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchView.clearFocus();
+                return false;
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+
+        })
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
 }
