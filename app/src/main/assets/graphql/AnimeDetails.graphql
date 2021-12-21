@@ -1,0 +1,54 @@
+query media($id: Int, $type: MediaType, $isAdult: Boolean) {
+  Media(id: $id, type: $type, isAdult: $isAdult) {
+    id
+    title {
+      romaji
+      native
+      english
+      userPreferred
+    }
+    coverImage {
+      large
+    }
+    startDate {
+      year
+      month
+      day
+    }
+    endDate {
+      year
+      month
+      day
+    }
+    bannerImage
+    season
+    description
+    type
+    format
+    status(version: 2)
+    episodes
+    duration
+    genres
+    isAdult
+    averageScore
+    popularity
+    nextAiringEpisode {
+      airingAt
+      timeUntilAiring
+      episode
+    }
+    mediaListEntry {
+      id
+      status
+    }
+    studios {
+      edges {
+        isMain
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
