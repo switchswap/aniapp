@@ -1,6 +1,6 @@
 package moe.swap.aniapp.network.anilist.models
 
-data class Media(
+data class AnimeAnilistEntity(
     val averageScore: Int,
     val bannerImage: String,
     val coverImage: CoverImage,
@@ -12,10 +12,11 @@ data class Media(
     val genres: List<String>,
     val id: Int,
     val isAdult: Boolean,
-    val mediaListEntry: Any,
-    val nextAiringEpisode: Any,
+    val mediaListEntry: Any, // TODO: Fix this
+    val nextAiringEpisode: NextAiringEpisode,
     val popularity: Int,
     val season: String,
+    val seasonYear: Int,
     val startDate: StartDate,
     val status: String,
     val studios: Studios,
@@ -57,5 +58,12 @@ data class Media(
         val native: String,
         val romaji: String,
         val userPreferred: String
+    )
+
+    data class NextAiringEpisode (
+        val airingAt: Long,
+        val timeUntilAiring: Long,
+        val episode: Int
+
     )
 }
