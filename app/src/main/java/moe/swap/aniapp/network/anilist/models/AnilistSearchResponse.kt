@@ -2,7 +2,7 @@ package moe.swap.aniapp.network.anilist.models
 
 import com.google.gson.annotations.SerializedName
 
-data class AnimeQueryResult(
+data class AnilistSearchResponse(
     val `data`: Data
 ) {
     data class Data(
@@ -11,7 +11,7 @@ data class AnimeQueryResult(
         val page: Page
     ) {
         data class Page(
-            val media: List<Media>,
+            val media: List<AnimeAnilistEntity>,
             val pageInfo: PageInfo
         ) {
             data class PageInfo(
