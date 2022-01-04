@@ -28,7 +28,6 @@ class AnimeCardGroupAdapter(private val dataSet: List<AnimeCardGroup>) :
                 // Todo: Make span count dynamic
                 layoutManager = GridLayoutManager(context, 1, LinearLayoutManager.HORIZONTAL, false)
                 adapter = AnimeCardAdapter(animeCardGroup.cards, true)
-                addItemDecoration(GridSpacingItemDecoration(1, 25))
             }
         }
     }
