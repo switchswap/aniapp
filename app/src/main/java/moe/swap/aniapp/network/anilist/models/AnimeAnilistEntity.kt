@@ -1,22 +1,22 @@
 package moe.swap.aniapp.network.anilist.models
 
 data class AnimeAnilistEntity(
-    val averageScore: Int,
-    val bannerImage: String,
+    val averageScore: Int?,
+    val bannerImage: String?,
     val coverImage: CoverImage,
     val description: String,
     val duration: Int,
     val endDate: EndDate,
-    val episodes: Int,
+    val episodes: Int?,
     val format: String,
     val genres: List<String>,
     val id: Int,
     val isAdult: Boolean,
-    val mediaListEntry: Any, // TODO: Fix this
-    val nextAiringEpisode: NextAiringEpisode,
+    val mediaListEntry: Any?, // TODO: Fix this
+    val nextAiringEpisode: NextAiringEpisode?,
     val popularity: Int,
-    val season: String,
-    val seasonYear: Int,
+    val season: String?,
+    val seasonYear: Int?,
     val startDate: StartDate,
     val status: String,
     val studios: Studios,

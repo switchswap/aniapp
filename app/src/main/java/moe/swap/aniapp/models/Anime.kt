@@ -56,10 +56,10 @@ data class Anime(
     val timeUntilNextEpisode: Long?,
     val season: AnimeSeason?,
     val year: Int?,
-    val rating: Double,
+    val rating: Double?,
     val tags: List<String>,
     val coverUrl: String,
-    val bannerUrl: String,
+    val bannerUrl: String?,
     val selectedSourceId: Long
 ): Serializable
 
@@ -70,9 +70,9 @@ data class Anime(
  * @param romaji The native title of the anime as written in the western writing system
  */
 data class AnimeTitle(
-    val native: String,
-    val english: String,
-    val romaji: String
+    val native: String?,
+    val english: String?,
+    val romaji: String?
 ): Serializable
 
 /**
