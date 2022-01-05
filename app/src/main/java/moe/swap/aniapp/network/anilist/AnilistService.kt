@@ -15,7 +15,8 @@ interface AnilistService {
         @Body builder: QueryContainerBuilder
     ): Response<GraphContainer<AnilistSearchResponse>>
 
+
     companion object {
-        const val API_URL = "https://graphql.anilist.co/"
+        const val BASE_URL = "https://graphql.anilist.co/"
     }
 }

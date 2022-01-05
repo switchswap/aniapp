@@ -26,7 +26,7 @@ val appModule = module {
 
     single {
         Retrofit.Builder()
-            .baseUrl(AnilistService.API_URL)
+            .baseUrl(AnilistService.BASE_URL)
             .client(get<OkHttpClient>())
             .addConverterFactory(
                 GraphConverter(
