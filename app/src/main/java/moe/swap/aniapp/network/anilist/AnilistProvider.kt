@@ -1,20 +1,18 @@
 package moe.swap.aniapp.network.anilist
 
 import android.os.Build
+import android.util.Log
 import io.github.wax911.library.model.request.QueryContainerBuilder
-import moe.swap.aniapp.network.anilist.models.AnimeQueryResult
+import moe.swap.aniapp.network.anilist.models.AnilistSearchResponse
 import moe.swap.aniapp.network.util.GraphContainer
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.get
 import retrofit2.Response
 import java.time.Year
 import java.time.YearMonth
 import java.util.*
 
-class AnilistProvider: KoinComponent {
+class AnilistProvider(private val anilistService: AnilistService) {
 
-    suspend fun getSeasonPopular(season: String = getSeason(), year: Int = getYear()): Response<GraphContainer<AnimeQueryResult>> {
-        val service: AnilistService = get()
+    suspend fun getSeasonPopular(season: String = getSeason(), year: Int = getYear()): Response<GraphContainer<AnilistSearchResponse>> {
         val queryBuilder = QueryContainerBuilder()
             .putVariables(
                 mapOf(
@@ -24,7 +22,7 @@ class AnilistProvider: KoinComponent {
                     "sort" to arrayOf("POPULARITY_DESC")
                 )
             )
-        return service.searchAnime(queryBuilder)
+        return anilistService.searchAnime(queryBuilder)
     }
 
     companion object {
