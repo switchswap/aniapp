@@ -25,6 +25,18 @@ class AnilistProvider(private val anilistService: AnilistService) {
         return anilistService.searchAnime(queryBuilder)
     }
 
+    suspend fun getSearchResult(query: String, page: Int): Response<GraphContainer<AnilistSearchResponse>> {
+        val queryBuilder = QueryContainerBuilder()
+            .putVariables(
+                mapOf(
+                    "type" to "ANIME",
+                    "search" to query,
+                    "page" to page
+                )
+            )
+        return anilistService.searchAnime(queryBuilder)
+    }
+
     companion object {
         /**
          * Return current year for use in Anilist GraphQL query
