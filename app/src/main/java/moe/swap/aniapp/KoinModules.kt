@@ -7,6 +7,7 @@ import io.github.wax911.library.annotation.processor.plugin.AssetManagerDiscover
 import io.github.wax911.library.converter.GraphConverter
 import io.github.wax911.library.logger.DefaultGraphLogger
 import io.github.wax911.library.logger.contract.ILogger
+import moe.swap.aniapp.data.AnimeRepository
 import moe.swap.aniapp.network.anilist.AnilistProvider
 import moe.swap.aniapp.network.anilist.AnilistService
 import okhttp3.OkHttpClient
@@ -43,5 +44,6 @@ val appModule = module {
             .create(AnilistService::class.java)
     }
 
-    single { AnilistProvider }
+    single { AnilistProvider(get<AnilistService>()) }
+    single { AnimeRepository(get<AnilistProvider>()) }
 }
