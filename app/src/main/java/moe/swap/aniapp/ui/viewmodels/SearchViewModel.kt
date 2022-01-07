@@ -17,7 +17,7 @@ class SearchViewModel : ViewModel(), KoinComponent {
 
     fun searchAnime(query: String): Flow<PagingData<Anime>> {
         currentQuery = query
-        val newResult: Flow<PagingData<Anime>> = animeRepository.getSearchResults(query)
+        val newResult: Flow<PagingData<Anime>> = animeRepository.findAnime(query)
             .cachedIn(viewModelScope)
         currentSearchResult = newResult
         return newResult

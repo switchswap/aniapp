@@ -17,7 +17,7 @@ class AnimeRepository(private val anilistProvider: AnilistProvider) {
         return entries.map { it.convertToAnime() }
     }
 
-    fun getSearchResults(query: String): Flow<PagingData<Anime>> {
+    fun findAnime(query: String): Flow<PagingData<Anime>> {
         return Pager(
             config = PagingConfig(
                 pageSize = 20,
