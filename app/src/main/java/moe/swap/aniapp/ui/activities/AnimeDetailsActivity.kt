@@ -1,6 +1,8 @@
 package moe.swap.aniapp.ui.activities
 
+import android.opengl.Visibility
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -16,6 +18,7 @@ class AnimeDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAnimeDetailsBinding
     private lateinit var anime: Anime
+    private var descriptionExpanded: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +39,33 @@ class AnimeDetailsActivity : AppCompatActivity() {
                     anime.rating!!.roundToInt()
                 ) else "N/A"
                 animeNextEpisode.text = anime.nextEpisode()
-                animeDescription.text = anime.description.trimMargin()
+
+                val description = anime.description.trimMargin()
+                animeDescription.text = description
+
+                animeDescription.post {
+                    // If not ellipsized, hide more button
+                    if (animeDescription.layout?.text.toString() == description) {
+                        buttonMore.visibility = View.GONE
+                    }
+                    else {
+                        buttonMore.visibility = View.VISIBLE
+
+                        // Set on click to toggle text view size
+                        buttonMore.setOnClickListener {
+                            if (descriptionExpanded) {
+                                animeDescription.maxLines = 3
+                                buttonMore.text = "More"
+                                descriptionExpanded = false
+                            }
+                            else {
+                                animeDescription.maxLines = Int.MAX_VALUE
+                                buttonMore.text = "Less"
+                                descriptionExpanded = true
+                            }
+                        }
+                    }
+                }
             }
 
             // Load in banner and cover via glide

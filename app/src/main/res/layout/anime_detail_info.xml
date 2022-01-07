@@ -79,6 +79,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:clickable="false"
+        android:ellipsize="end"
         android:longClickable="true"
         android:maxLines="3"
         android:text="From throughout the ages, a group of legendary girls have become zombie idols to save Saga Prefecture. It's the return of the cutting-edge zombie idol anime! One day, Minamoto Sakura lost her life in an unfortunate accident. Then, ten years later… After Sakura wakes up in a strange mansion, mysterious idol producer Tatsumi Kotaro tells her that she will be joining a group of legendary girls to form an idol unit. The seven girls are charged with a quest to save the fading Saga Prefecture and adopt the group name Franchouchou. After overcoming the difficulties stemming from their different ages and different periods of history, their undead zombie bodies allow them to defy expectations of what idols can be. During the final winter of the Heisei era they performed their first featured concert at Karatsu's Furusato Exhibition Hall, Arpino, taking another step towards becoming a legend. Now, in the modern Reiwa Era… The curtain rises on a new chapter in the story of Franchouchou, as they march towards a bright future full of hope."
@@ -112,4 +113,14 @@
         android:text="Finished"
         app:layout_constraintStart_toEndOf="@+id/label_anime_next_episode"
         app:layout_constraintTop_toTopOf="@+id/label_anime_next_episode" />
+
+    <TextView
+        android:id="@+id/button_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="More"
+        android:textColor="@color/lightblue_500"
+        app:layout_constraintEnd_toEndOf="@+id/anime_description"
+        app:layout_constraintTop_toBottomOf="@+id/anime_description" />
 </androidx.constraintlayout.widget.ConstraintLayout>
